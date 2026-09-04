@@ -926,11 +926,11 @@ textarea.form-control {
   grid-template-columns:
     30px minmax(0, 1fr);
 
-  column-gap: 9px;
+  column-gap: 4px;
 
   align-items: start;
 
-  padding: 0 13px;
+  padding: 2px 5px;
 }
 
 .about-point:first-child {
