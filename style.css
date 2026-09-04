@@ -3180,16 +3180,14 @@ textarea.form-control {
 }
 
 
-/* =========================================================
-   WHY CHOOSE US
-   FINAL REFERENCE-MATCH CSS
-========================================================= */
+/* =====================================================
+   WHY CHOOSE US - FINAL CLEAN CSS
+===================================================== */
 
 .why-sec {
   position: relative;
   width: 100%;
-
-  padding: 68px 0 58px;
+  padding: 68px 0 60px;
 
   background: #ffffff;
 
@@ -3199,47 +3197,44 @@ textarea.form-control {
 }
 
 
-/* =========================================================
-   MAIN LAYOUT
-========================================================= */
+/* =====================================================
+   MAIN WRAPPER
+===================================================== */
 
 .why-wrap {
-  width: min(1420px, 90%);
-
+  width: min(1500px, 94%);
   margin: 0 auto;
 
   display: grid;
 
   grid-template-columns:
-    minmax(0, 0.94fr)
-    minmax(0, 1.06fr);
+    minmax(0, 1fr)
+    minmax(0, 1fr);
 
-  gap: 78px;
+  gap: 52px;
 
   align-items: start;
 }
 
 
-/* =========================================================
-   LEFT
-========================================================= */
+/* =====================================================
+   LEFT SIDE
+===================================================== */
 
 .why-left {
   min-width: 0;
 }
 
 
-/* =====================
-   SMALL LABEL
-===================== */
+/* kicker */
 
 .why-kicker {
   display: flex;
   align-items: center;
 
-  gap: 15px;
+  gap: 13px;
 
-  margin-bottom: 11px;
+  margin-bottom: 9px;
 }
 
 
@@ -3247,9 +3242,9 @@ textarea.form-control {
   width: 9px;
   height: 9px;
 
-  background: #f15a24;
-
   flex-shrink: 0;
+
+  background: #f15a24;
 }
 
 
@@ -3258,41 +3253,38 @@ textarea.form-control {
 
   color: #f15a24;
 
-  font-size: 15px;
-  font-weight: 400;
-
-  line-height: 1;
+  font-size: 13px;
+  font-weight: 500;
 }
 
 
 .why-kicker-line {
   display: block;
 
-  width: 43px;
+  width: 39px;
   height: 2px;
 
-  margin-bottom: 27px;
+  margin-bottom: 24px;
 
   background: #f15a24;
 }
 
 
-/* =========================================================
+/* =====================================================
    HEADING
-========================================================= */
+===================================================== */
 
 .why-left h2 {
-  max-width: 680px;
+  max-width: 720px;
 
-  margin: 0 0 27px;
+  margin: 0 0 26px;
 
   color: #082d63;
 
-  font-size: clamp(47px, 4vw, 61px);
+  font-size: 52px;
+  line-height: 1.07;
 
-  line-height: 1.08;
-
-  letter-spacing: -2px;
+  letter-spacing: -1.9px;
 
   font-weight: 800;
 }
@@ -3303,81 +3295,58 @@ textarea.form-control {
 }
 
 
-/* =========================================================
+/* =====================================================
    INTRO TEXT
-========================================================= */
+===================================================== */
 
 .why-intro {
-  max-width: 620px;
+  max-width: 610px;
 
-  margin: 0 0 35px;
+  margin: 0 0 32px;
 
-  color: #303640;
+  color: #373e48;
 
-  font-size: 14px;
-
+  font-size: 13px;
   line-height: 1.8;
 
   font-weight: 400;
 }
 
 
-/* =========================================================
+/* =====================================================
    IMAGE
-========================================================= */
+===================================================== */
 
 .why-image-box {
   position: relative;
 
   width: 100%;
-  max-width: 620px;
-
-  height: 425px;
+  max-width: 610px;
+  height: 395px;
 
   overflow: visible;
 
-  border-radius: 15px;
+  z-index: 2;
 }
 
 
-/* orange outline behind */
+/* orange outline */
 
 .why-image-box::before {
   content: "";
 
   position: absolute;
 
-  left: -23px;
+  left: -20px;
   bottom: -18px;
 
-  width: calc(100% - 12px);
+  width: calc(100% - 14px);
   height: 72%;
 
   border: 1.5px solid #f15a24;
+  border-radius: 14px;
 
-  border-radius: 15px;
-
-  z-index: 0;
-}
-
-
-.why-image-box img {
-  position: relative;
-
-  z-index: 2;
-
-  width: 100%;
-  height: 100%;
-
-  display: block;
-
-  object-fit: cover;
-  object-position: center;
-
-  border-radius: 15px;
-
-  box-shadow:
-    0 15px 35px rgba(8, 45, 99, 0.08);
+  z-index: -1;
 }
 
 
@@ -3388,41 +3357,57 @@ textarea.form-control {
 
   position: absolute;
 
-  left: -52px;
-  bottom: -22px;
+  left: -48px;
+  bottom: -30px;
 
-  width: 100px;
-  height: 90px;
+  width: 90px;
+  height: 76px;
 
-  background-image:
+  background:
     radial-gradient(
       circle,
-      rgba(241, 90, 36, 0.55) 3px,
-      transparent 3px
+      rgba(241, 90, 36, 0.55) 2px,
+      transparent 2.4px
     );
 
-  background-size: 18px 18px;
+  background-size: 14px 14px;
 
-  z-index: 1;
+  z-index: -2;
 }
 
 
-/* =========================================================
-   CTA
-========================================================= */
+.why-image-box img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+
+  border-radius: 14px;
+
+  box-shadow:
+    0 14px 34px rgba(8, 45, 99, 0.10);
+}
+
+
+/* =====================================================
+   BUTTON
+===================================================== */
 
 .why-btn {
-  margin-top: 32px;
+  margin-top: 36px;
 
-  min-height: 55px;
+  height: 52px;
 
-  padding: 0 31px;
+  padding: 0 28px;
 
   display: inline-flex;
   align-items: center;
   justify-content: center;
 
-  gap: 22px;
+  gap: 20px;
 
   border-radius: 5px;
 
@@ -3432,22 +3417,21 @@ textarea.form-control {
 
   text-decoration: none;
 
-  font-size: 14px;
-
+  font-size: 13px;
   font-weight: 600;
 
   transition:
-    background 0.3s ease,
-    transform 0.3s ease;
+    transform 0.25s ease,
+    background 0.25s ease;
 }
 
 
 .why-btn i {
   color: #f15a24;
 
-  font-size: 16px;
+  font-size: 14px;
 
-  transition: transform 0.3s ease;
+  transition: transform 0.25s ease;
 }
 
 
@@ -3464,35 +3448,36 @@ textarea.form-control {
 
 
 /* =========================================================
-   RIGHT SIDE
+   WHY CHOOSE US - RIGHT SIDE
+   FINAL REFERENCE MATCH
 ========================================================= */
 
-.why-right {
+.why-sec .why-right {
   position: relative;
-
+  width: 100%;
+  max-width: 650px;
   min-width: 0;
-
-  padding-top: 0;
+  padding: 0;
 }
 
 
 /* =========================================================
-   VERTICAL LINE
+   VERTICAL TIMELINE
+   Reference: circle ke LEFT side
 ========================================================= */
 
-.why-timeline {
+.why-sec .why-right .why-timeline {
   position: absolute;
 
-  left: 65px;
+  left: 9px;
+  top: 54px;
+  bottom: 68px;
 
-  top: 68px;
-  bottom: 86px;
+  width: 1px;
 
-  width: 1.5px;
+  background: #244c84;
 
-  background: #214a83;
-
-  z-index: 0;
+  z-index: 1;
 }
 
 
@@ -3500,29 +3485,51 @@ textarea.form-control {
    EACH ROW
 ========================================================= */
 
-.why-item {
+.why-sec .why-right .why-item {
   position: relative;
 
   display: grid;
 
   grid-template-columns:
-    140px minmax(0, 1fr);
+    120px minmax(0, 1fr);
 
-  column-gap: 33px;
+  column-gap: 80px;
 
-  min-height: 215px;
+  min-height: 175px;
 
-  padding-bottom: 26px;
+  margin: 0;
+  padding: 0 0 22px;
+
+  border: 0;
 
   z-index: 2;
 }
 
 
-.why-item:not(:last-child) {
-  margin-bottom: 6px;
+/* row spacing */
 
-  border-bottom:
-    1px solid #dfe4ea;
+.why-sec .why-right .why-item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+
+/* horizontal separator
+   Reference me icon ke BAAD start hoti hai
+*/
+
+.why-sec .why-right .why-item:not(:last-child)::after {
+  content: "";
+
+  position: absolute;
+
+  left: 132px;
+  right: 0;
+  bottom: 0;
+
+  width: auto;
+  height: 1px;
+
+  background: #e3e7ec;
 }
 
 
@@ -3530,41 +3537,56 @@ textarea.form-control {
    ICON COLUMN
 ========================================================= */
 
-.why-icon-side {
+.why-sec .why-icon-side {
   position: relative;
 
+  width: 150px;
+
   display: flex;
-  justify-content: flex-start;
+
+  justify-content: flex-end;
   align-items: flex-start;
 }
 
 
-/* orange timeline point */
+/* =========================================================
+   ORANGE DOT ON VERTICAL LINE
+========================================================= */
 
-.why-node {
+.why-sec .why-node {
   position: absolute;
 
-  left: 59px;
-  top: 72px;
+  /* line left = 9px
+     dot centered on line */
+  left: 4px;
+  top: 48px;
 
-  width: 13px;
-  height: 13px;
+  width: 11px;
+  height: 11px;
+
+  display: block;
 
   border-radius: 50%;
 
   background: #f15a24;
 
-  z-index: 6;
+  opacity: 1;
+
+  z-index: 10;
 }
 
 
-/* white icon circle */
+/* =========================================================
+   WHITE ICON CIRCLE
+========================================================= */
 
-.why-icon-circle {
+.why-sec .why-icon-circle {
   position: relative;
 
-  width: 132px;
-  height: 132px;
+  width: 100px;
+  height: 100px;
+
+  flex: 0 0 100px;
 
   display: grid;
   place-items: center;
@@ -3575,10 +3597,10 @@ textarea.form-control {
 
   color: #082d63;
 
-  font-size: 48px;
+  font-size: 34px;
 
   box-shadow:
-    0 9px 24px rgba(8, 45, 99, 0.09);
+    0 7px 19px rgba(8, 45, 99, 0.11);
 
   z-index: 4;
 
@@ -3588,32 +3610,36 @@ textarea.form-control {
 }
 
 
-/* orange arc */
+/* =========================================================
+   ORANGE PARTIAL ARC
+========================================================= */
 
-.why-icon-circle::before {
+.why-sec .why-icon-circle::before {
   content: "";
 
   position: absolute;
 
-  inset: -8px;
+  inset: -5px;
 
-  border: 3px solid transparent;
+  border: 2px solid transparent;
 
   border-top-color: #f15a24;
   border-left-color: #f15a24;
 
   border-radius: 50%;
 
-  transform: rotate(28deg);
+  transform: rotate(27deg);
 
   pointer-events: none;
 }
 
 
-/* icon */
+/* actual FA icon */
 
-.why-icon-circle i {
+.why-sec .why-icon-circle i {
   position: relative;
+
+  color: #082d63;
 
   z-index: 2;
 }
@@ -3623,61 +3649,68 @@ textarea.form-control {
    CONTENT
 ========================================================= */
 
-.why-content {
-  padding-top: 8px;
+.why-sec .why-content {
+  min-width: 0;
+
+  padding-top: 3px;
 }
 
 
-.why-number {
+/* 01 / 02 / 03 / 04 */
+
+.why-sec .why-number {
   display: block;
 
-  margin-bottom: 6px;
+  margin: 0 0 6px;
 
   color: #f15a24;
 
-  font-size: 27px;
-
+  font-size: 20px;
   line-height: 1;
 
   font-weight: 700;
 }
 
 
-.why-content h3 {
+/* title */
+
+.why-sec .why-content h3 {
   margin: 0;
 
   color: #082d63;
 
-  font-size: 23px;
-
+  font-size: 18px;
   line-height: 1.25;
 
   font-weight: 700;
 }
 
 
-.why-small-line {
+/* orange title underline */
+
+.why-sec .why-small-line {
   display: block;
 
-  width: 42px;
+  width: 34px;
   height: 2px;
 
-  margin: 15px 0 19px;
+  margin: 12px 0 14px;
 
   background: #f15a24;
 }
 
 
-.why-content p {
-  max-width: 500px;
+/* description */
+
+.why-sec .why-content p {
+  max-width: 390px;
 
   margin: 0;
 
-  color: #343b45;
+  color: #3e454f;
 
-  font-size: 14px;
-
-  line-height: 1.72;
+  font-size: 11.5px;
+  line-height: 1.65;
 
   font-weight: 400;
 }
@@ -3687,48 +3720,106 @@ textarea.form-control {
    HOVER
 ========================================================= */
 
-.why-item:hover .why-icon-circle {
-  transform: translateY(-5px);
+.why-sec .why-item:hover .why-icon-circle {
+  transform: translateY(-3px);
 
   box-shadow:
-    0 15px 30px rgba(8, 45, 99, 0.13);
+    0 12px 26px rgba(8, 45, 99, 0.14);
 }
 
 
 /* =========================================================
-   LIGHTNING BACKGROUND
+   MOBILE
 ========================================================= */
 
-.why-sec::after {
-  content: "\f0e7";
+@media (max-width: 650px) {
 
-  position: absolute;
+  .why-sec .why-right {
+    max-width: 100%;
+  }
 
-  top: 25px;
-  right: 55px;
 
-  font-family: "Font Awesome 6 Free";
-  font-weight: 900;
+  .why-sec .why-right .why-item {
+    grid-template-columns:
+      84px minmax(0, 1fr);
 
-  font-size: 190px;
+    column-gap: 15px;
 
-  color: rgba(8, 45, 99, 0.025);
+    min-height: 145px;
 
-  transform: rotate(10deg);
+    padding-bottom: 20px;
+  }
 
-  pointer-events: none;
+
+  .why-sec .why-right .why-timeline {
+    left: 7px;
+    top: 41px;
+    bottom: 52px;
+  }
+
+
+  .why-sec .why-icon-side {
+    width: 84px;
+  }
+
+
+  .why-sec .why-node {
+    left: 2px;
+    top: 36px;
+
+    width: 10px;
+    height: 10px;
+  }
+
+
+  .why-sec .why-icon-circle {
+    width: 74px;
+    height: 74px;
+
+    flex-basis: 74px;
+
+    font-size: 26px;
+  }
+
+
+  .why-sec .why-right .why-item:not(:last-child)::after {
+    left: 96px;
+  }
+
+
+  .why-sec .why-number {
+    font-size: 17px;
+  }
+
+
+  .why-sec .why-content h3 {
+    font-size: 15px;
+  }
+
+
+  .why-sec .why-small-line {
+    width: 30px;
+
+    margin:
+      10px 0 12px;
+  }
+
+
+  .why-sec .why-content p {
+    font-size: 10px;
+    line-height: 1.6;
+  }
+
 }
 
-
-/* =========================================================
+/* =====================================================
    ANIMATION
-========================================================= */
+===================================================== */
 
 .why-left {
   opacity: 0;
 
-  transform:
-    translateX(-30px);
+  transform: translateX(-30px);
 
   transition:
     opacity 0.7s ease,
@@ -3739,136 +3830,98 @@ textarea.form-control {
 .why-item {
   opacity: 0;
 
-  transform:
-    translateX(30px);
+  transform: translateX(28px);
 
   transition:
-    opacity 0.6s ease,
-    transform 0.6s ease;
+    opacity 0.55s ease,
+    transform 0.55s ease;
 }
 
 
-.why-sec.animate .why-left {
+.why-sec.animate
+.why-left {
   opacity: 1;
 
-  transform:
-    translateX(0);
+  transform: translateX(0);
 }
 
 
-.why-sec.animate .why-item {
+.why-sec.animate
+.why-item {
   opacity: 1;
 
-  transform:
-    translateX(0);
+  transform: translateX(0);
 }
 
 
 .why-sec.animate
 .why-item:nth-child(2) {
-  transition-delay: 0.08s;
+  transition-delay: 0.07s;
 }
 
 
 .why-sec.animate
 .why-item:nth-child(3) {
-  transition-delay: 0.16s;
+  transition-delay: 0.14s;
 }
 
 
 .why-sec.animate
 .why-item:nth-child(4) {
-  transition-delay: 0.24s;
+  transition-delay: 0.21s;
 }
 
 
 .why-sec.animate
 .why-item:nth-child(5) {
-  transition-delay: 0.32s;
+  transition-delay: 0.28s;
 }
 
 
-/* =========================================================
-   1200PX
-========================================================= */
+/* =====================================================
+   TABLET
+===================================================== */
 
-@media (max-width: 1200px) {
+@media (max-width: 1050px) {
 
   .why-wrap {
-    gap: 50px;
+    width: 90%;
+
+    grid-template-columns: 1fr;
+
+    gap: 60px;
   }
 
 
   .why-left h2 {
+    max-width: 680px;
+
     font-size: 48px;
   }
 
 
-  .why-item {
-    grid-template-columns:
-      120px 1fr;
-
-    column-gap: 25px;
-  }
-
-
-  .why-icon-circle {
-    width: 110px;
-    height: 110px;
-
-    font-size: 38px;
-  }
-
-
-  .why-timeline {
-    left: 54px;
-  }
-
-
-  .why-node {
-    left: 49px;
-    top: 59px;
-  }
-
-}
-
-
-/* =========================================================
-   TABLET
-========================================================= */
-
-@media (max-width: 950px) {
-
-  .why-wrap {
-    grid-template-columns: 1fr;
-
-    gap: 65px;
-  }
-
-
   .why-image-box {
-    max-width: 700px;
+    max-width: 650px;
 
-    height: 430px;
+    height: 410px;
   }
 
 
   .why-right {
-    max-width: 800px;
+    max-width: 720px;
   }
 
 }
 
 
-/* =========================================================
+/* =====================================================
    MOBILE
-========================================================= */
+===================================================== */
 
 @media (max-width: 650px) {
 
   .why-sec {
-    padding:
-      60px 0 50px;
+    padding: 55px 0;
   }
 
 
@@ -3878,25 +3931,28 @@ textarea.form-control {
 
 
   .why-left h2 {
-    font-size: 36px;
+    font-size: 34px;
 
-    letter-spacing: -1.2px;
+    letter-spacing: -1px;
   }
 
 
   .why-intro {
-    font-size: 12.5px;
+    font-size: 12px;
   }
 
 
   .why-image-box {
-    height: 300px;
+    height: 290px;
   }
 
 
-  .why-image-box::before,
-  .why-image-box::after {
-    display: none;
+  .why-btn {
+    height: 48px;
+
+    padding: 0 22px;
+
+    font-size: 11px;
   }
 
 
@@ -3904,64 +3960,2329 @@ textarea.form-control {
     grid-template-columns:
       85px minmax(0, 1fr);
 
-    column-gap: 18px;
+    column-gap: 15px;
 
-    min-height: 160px;
+    min-height: 145px;
+  }
+
+
+  .why-icon-side {
+    width: 85px;
+  }
+
+
+  .why-timeline {
+    left: 7px;
+
+    top: 42px;
+    bottom: 55px;
+  }
+
+
+  .why-node {
+    left: 2px;
+    top: 37px;
+
+    width: 10px;
+    height: 10px;
   }
 
 
   .why-icon-circle {
-    width: 78px;
-    height: 78px;
+    width: 74px;
+    height: 74px;
+
+    font-size: 26px;
+  }
+
+
+  .why-item:not(:last-child)::after {
+    left: 88px;
+  }
+
+
+  .why-number {
+    font-size: 17px;
+  }
+
+
+  .why-content h3 {
+    font-size: 15px;
+  }
+
+
+  .why-content p {
+    font-size: 10px;
+  }
+
+}
+
+/* =========================================================
+   TESTIMONIAL SECTION
+========================================================= */
+
+.testimonial-sec {
+  position: relative;
+  width: 100%;
+
+  padding: 78px 0 70px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #fbfcfe 100%
+    );
+
+  font-family: "Poppins", sans-serif;
+
+  overflow: hidden;
+}
+
+
+.testimonial-container {
+  position: relative;
+
+  width: min(1400px, 92%);
+
+  margin: 0 auto;
+
+  z-index: 2;
+}
+
+
+/* decorative dots */
+
+.testimonial-sec::before,
+.testimonial-sec::after {
+  content: "";
+
+  position: absolute;
+
+  top: 100px;
+
+  width: 135px;
+  height: 95px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(241, 90, 36, 0.40) 2px,
+      transparent 2.5px
+    );
+
+  background-size: 15px 15px;
+
+  opacity: 0.65;
+}
+
+
+.testimonial-sec::before {
+  left: 8%;
+}
+
+
+.testimonial-sec::after {
+  right: 8%;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.testimonial-head {
+  max-width: 850px;
+
+  margin: 0 auto 45px;
+
+  text-align: center;
+}
+
+
+.testimonial-kicker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 15px;
+
+  margin-bottom: 15px;
+}
+
+
+.testimonial-kicker p {
+  margin: 0;
+
+  color: #f15a24;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  letter-spacing: 1.8px;
+}
+
+
+.testimonial-kicker span {
+  display: block;
+
+  width: 38px;
+  height: 2px;
+
+  background: #f15a24;
+}
+
+
+.testimonial-head h2 {
+  margin: 0;
+
+  color: #082d63;
+
+  font-size: clamp(40px, 4vw, 57px);
+
+  line-height: 1.08;
+
+  font-weight: 800;
+
+  letter-spacing: -1.7px;
+}
+
+
+.testimonial-head h2 span {
+  color: #f15a24;
+}
+
+
+.testimonial-title-line {
+  width: 48px;
+  height: 3px;
+
+  margin: 20px auto 17px;
+
+  background: #f15a24;
+}
+
+
+.testimonial-subtitle {
+  max-width: 680px;
+
+  margin: 0 auto;
+
+  color: #404752;
+
+  font-size: 13.5px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   SLIDER WRAP
+========================================================= */
+
+.testimonial-slider-wrap {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  gap: 22px;
+}
+
+
+/* viewport */
+
+.testimonial-viewport {
+  width: 100%;
+
+  overflow: hidden;
+}
+
+
+/* track */
+
+.testimonial-track {
+  display: flex;
+
+  gap: 28px;
+
+  transition:
+    transform 0.55s cubic-bezier(
+      0.22,
+      0.61,
+      0.36,
+      1
+    );
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.testimonial-card {
+  flex:
+    0 0 calc(
+      (100% - 56px) / 3
+    );
+
+  overflow: hidden;
+
+  border-radius: 13px;
+
+  background: #ffffff;
+
+  border:
+    1px solid #edf0f4;
+
+  box-shadow:
+    0 12px 32px rgba(8, 45, 99, 0.08);
+
+  border-bottom:
+    4px solid #f15a24;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 18px 40px rgba(8, 45, 99, 0.12);
+}
+
+
+/* =========================================================
+   CARD BODY
+========================================================= */
+
+.testimonial-body {
+  min-height: 300px;
+
+  padding:
+    27px 37px 24px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+
+.quote-icon {
+  margin-bottom: 17px;
+
+  color: #f15a24;
+
+  font-size: 38px;
+
+  line-height: 1;
+}
+
+
+.testimonial-text {
+  max-width: 310px;
+
+  margin: 0 auto;
+
+  color: #27303c;
+
+  font-size: 13px;
+
+  line-height: 1.8;
+
+  font-weight: 400;
+}
+
+
+.testimonial-divider {
+  width: 55px;
+  height: 1px;
+
+  margin: 20px auto 16px;
+
+  background: #d9dfe6;
+}
+
+
+.testimonial-stars {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 6px;
+
+  color: #f15a24;
+
+  font-size: 15px;
+}
+
+
+/* =========================================================
+   USER AREA
+========================================================= */
+
+.testimonial-user {
+  min-height: 118px;
+
+  padding: 20px 30px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 16px;
+
+  background:
+    linear-gradient(
+      110deg,
+      #f6f8fb,
+      #f1f4f8
+    );
+}
+
+
+.testimonial-user img {
+  width: 74px;
+  height: 74px;
+
+  min-width: 74px;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+
+  border:
+    4px solid #ffffff;
+
+  box-shadow:
+    0 5px 15px rgba(8, 45, 99, 0.08);
+}
+
+
+.testimonial-user-info h4 {
+  margin: 0 0 4px;
+
+  color: #082d63;
+
+  font-size: 15px;
+
+  font-weight: 700;
+}
+
+
+.testimonial-user-info p {
+  margin: 0 0 5px;
+
+  color: #505762;
+
+  font-size: 11px;
+}
+
+
+.testimonial-user-info span {
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+
+  color: #353d47;
+
+  font-size: 10.5px;
+}
+
+
+.testimonial-user-info span i {
+  color: #f15a24;
+
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   NAVIGATION ARROWS
+========================================================= */
+
+.testimonial-nav {
+  width: 48px;
+  height: 48px;
+
+  min-width: 48px;
+
+  display: grid;
+  place-items: center;
+
+  border: 0;
+
+  border-radius: 50%;
+
+  background: #082d63;
+
+  color: #ffffff;
+
+  font-size: 15px;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 20px rgba(8, 45, 99, 0.16);
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+.testimonial-nav:hover {
+  background: #f15a24;
+
+  transform: scale(1.06);
+}
+
+
+/* =========================================================
+   DOTS
+========================================================= */
+
+.testimonial-dots {
+  margin-top: 27px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+}
+
+
+.testimonial-dot {
+  width: 9px;
+  height: 9px;
+
+  border: 0;
+
+  border-radius: 50%;
+
+  background: #dbe1e8;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+.testimonial-dot.active {
+  background: #f15a24;
+
+  transform: scale(1.25);
+}
+
+
+/* =========================================================
+   STATS BAR
+========================================================= */
+
+.testimonial-stats {
+  margin-top: 35px;
+
+  padding:
+    20px 28px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  border:
+    1px solid #edf0f4;
+
+  border-radius: 13px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 10px 30px rgba(8, 45, 99, 0.06);
+}
+
+
+.testimonial-stat {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  gap: 18px;
+
+  padding: 0 30px;
+}
+
+
+.testimonial-stat:not(:last-child)::after {
+  content: "";
+
+  position: absolute;
+
+  top: 5px;
+  right: 0;
+
+  width: 1px;
+  height: 55px;
+
+  background: #dce1e7;
+}
+
+
+/* stat icon */
+
+.testimonial-stat-icon {
+  width: 58px;
+  height: 58px;
+
+  min-width: 58px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      145deg,
+      #0b3a7a,
+      #061f47
+    );
+
+  color: #f15a24;
+
+  font-size: 23px;
+}
+
+
+/* stat number */
+
+.testimonial-stat h3 {
+  margin: 0 0 2px;
+
+  color: #082d63;
+
+  font-size: 26px;
+
+  line-height: 1;
+
+  font-weight: 800;
+}
+
+
+.testimonial-stat p {
+  margin: 0;
+
+  color: #4d5560;
+
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   SCROLL ANIMATION
+========================================================= */
+
+.testimonial-head,
+.testimonial-slider-wrap,
+.testimonial-stats {
+  opacity: 0;
+
+  transform: translateY(28px);
+
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+
+
+.testimonial-sec.animate
+.testimonial-head,
+.testimonial-sec.animate
+.testimonial-slider-wrap,
+.testimonial-sec.animate
+.testimonial-stats {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+
+.testimonial-sec.animate
+.testimonial-slider-wrap {
+  transition-delay: 0.10s;
+}
+
+
+.testimonial-sec.animate
+.testimonial-stats {
+  transition-delay: 0.20s;
+}
+
+
+/* =========================================================
+   RESPONSIVE - 1050
+========================================================= */
+
+@media (max-width: 1050px) {
+
+  .testimonial-card {
+    flex:
+      0 0 calc(
+        (100% - 28px) / 2
+      );
+  }
+
+
+  .testimonial-stats {
+    grid-template-columns:
+      repeat(2, 1fr);
+
+    gap: 25px 0;
+  }
+
+
+  .testimonial-stat:nth-child(2)::after {
+    display: none;
+  }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - 700
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .testimonial-sec {
+    padding: 60px 0;
+  }
+
+
+  .testimonial-container {
+    width: 90%;
+  }
+
+
+  .testimonial-head {
+    margin-bottom: 38px;
+  }
+
+
+  .testimonial-head h2 {
+    font-size: 34px;
+
+    letter-spacing: -1px;
+  }
+
+
+  .testimonial-subtitle {
+    font-size: 12.5px;
+  }
+
+
+  .testimonial-slider-wrap {
+    gap: 9px;
+  }
+
+
+  .testimonial-nav {
+    width: 40px;
+    height: 40px;
+
+    min-width: 40px;
+
+    font-size: 12px;
+  }
+
+
+  .testimonial-card {
+    flex: 0 0 100%;
+  }
+
+
+  .testimonial-body {
+    min-height: 280px;
+
+    padding:
+      25px 25px 22px;
+  }
+
+
+  .testimonial-user {
+    padding:
+      18px 22px;
+  }
+
+
+  .testimonial-user img {
+    width: 65px;
+    height: 65px;
+
+    min-width: 65px;
+  }
+
+
+  .testimonial-stats {
+    grid-template-columns: 1fr;
+
+    gap: 22px;
+
+    padding:
+      22px;
+  }
+
+
+  .testimonial-stat {
+    padding:
+      0 0 18px;
+
+    border-bottom:
+      1px solid #e0e5eb;
+  }
+
+
+  .testimonial-stat::after {
+    display: none;
+  }
+
+
+  .testimonial-stat:last-child {
+    border-bottom: 0;
+
+    padding-bottom: 0;
+  }
+
+
+  .testimonial-sec::before,
+  .testimonial-sec::after {
+    display: none;
+  }
+
+}
+
+
+/* =========================================================
+   PARALLAX CTA
+========================================================= */
+
+.parallax-cta {
+  position: relative;
+
+  width: calc(100% - 40px);
+  min-height: 560px;
+
+  margin: 20px auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-image: url("image/banner-1.webp");
+
+  background-size: cover;
+  background-position: center;
+
+  background-repeat: no-repeat;
+
+  background-attachment: fixed;
+
+  border-radius: 16px;
+
+  overflow: hidden;
+
+  font-family: "Poppins", sans-serif;
+}
+
+
+/* =========================================================
+   LIGHT NAVY OVERLAY
+========================================================= */
+
+.parallax-cta-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(4, 31, 70, 0.74) 0%,
+      rgba(4, 31, 70, 0.68) 45%,
+      rgba(4, 31, 70, 0.62) 100%
+    );
+
+  z-index: 1;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.parallax-cta-content {
+  position: relative;
+
+  z-index: 2;
+
+  width: min(900px, 90%);
+
+  padding: 70px 20px 50px;
+
+  text-align: center;
+
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   KICKER
+========================================================= */
+
+.parallax-cta-kicker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 14px;
+
+  margin-bottom: 18px;
+}
+
+
+.parallax-cta-kicker span {
+  width: 36px;
+  height: 2px;
+
+  background: #f15a24;
+}
+
+
+.parallax-cta-kicker p {
+  margin: 0;
+
+  color: #f15a24;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.6px;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.parallax-cta h2 {
+
+    margin: 0;
+    color: #ffffff;
+    font-size: clamp(38px, 5vw, 62px);
+    line-height: 1.08;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+}
+.parallax-cta h2 span {
+  color: #f15a24;
+}
+
+
+/* =========================================================
+   TEXT
+========================================================= */
+
+.parallax-cta-text {
+  max-width: 700px;
+
+  margin: 22px auto 0;
+
+  color: rgba(255, 255, 255, 0.92);
+
+  font-size: 14px;
+
+  line-height: 1.8;
+
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.parallax-cta-buttons {
+  margin-top: 35px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 18px;
+
+  flex-wrap: wrap;
+}
+
+
+.cta-btn {
+  min-width: 235px;
+
+  min-height: 56px;
+
+  padding: 0 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 14px;
+
+  border-radius: 6px;
+
+  text-decoration: none;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+.cta-btn-orange {
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      90deg,
+      #f15a24,
+      #ff7200
+    );
+
+  box-shadow:
+    0 10px 25px rgba(241, 90, 36, 0.22);
+}
+
+
+.cta-btn-orange:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 14px 30px rgba(241, 90, 36, 0.30);
+}
+
+
+.cta-btn-outline {
+  color: #ffffff;
+
+  border: 1px solid rgba(255, 255, 255, 0.85);
+
+  background: rgba(255, 255, 255, 0.03);
+
+  backdrop-filter: blur(3px);
+}
+
+
+.cta-btn-outline:hover {
+  transform: translateY(-3px);
+
+  border-color: #f15a24;
+
+  background: rgba(241, 90, 36, 0.10);
+}
+
+
+.cta-btn i {
+  font-size: 15px;
+}
+
+
+/* =========================================================
+   FEATURES
+========================================================= */
+
+.parallax-cta-features {
+  max-width: 760px;
+
+  margin: 42px auto 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.parallax-feature {
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 11px;
+
+  color: #ffffff;
+}
+
+
+.parallax-feature i {
+  color: #f15a24;
+
+  font-size: 23px;
+}
+
+
+.parallax-feature span {
+  font-size: 12px;
+
+  font-weight: 500;
+}
+
+
+.feature-divider {
+  width: 1px;
+  height: 38px;
+
+  background:
+    rgba(255, 255, 255, 0.25);
+
+  margin: 0 24px;
+}
+
+
+/* =========================================================
+   BOTTOM ARROW
+========================================================= */
+
+.parallax-scroll-arrow {
+  width: 38px;
+  height: 38px;
+
+  margin: 28px auto 0;
+
+  display: grid;
+  place-items: center;
+
+  color: #f15a24;
+
+  text-decoration: none;
+
+  font-size: 22px;
+
+  animation:
+    ctaArrowMove 1.7s infinite ease-in-out;
+}
+
+
+@keyframes ctaArrowMove {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(7px);
+  }
+
+}
+
+
+/* =========================================================
+   SCROLL ANIMATION
+========================================================= */
+
+.parallax-cta-content {
+  opacity: 0;
+
+  transform: translateY(35px);
+
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+
+.parallax-cta.active
+.parallax-cta-content {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .parallax-cta {
+    min-height: 540px;
+
+    background-attachment: scroll;
+  }
+
+
+  .parallax-cta-content {
+    padding:
+      60px 20px 45px;
+  }
+
+
+  .parallax-cta-features {
+    gap: 15px;
+  }
+
+
+  .feature-divider {
+    margin: 0 12px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .parallax-cta {
+    width: calc(100% - 24px);
+
+    min-height: auto;
+
+    margin: 12px auto;
+
+    border-radius: 12px;
+
+    background-position: 65% center;
+  }
+
+
+  .parallax-cta-overlay {
+    background:
+      rgba(4, 31, 70, 0.74);
+  }
+
+
+  .parallax-cta-content {
+    width: 92%;
+
+    padding:
+      55px 10px 38px;
+  }
+
+
+  .parallax-cta-kicker p {
+    font-size: 11px;
+  }
+
+
+  .parallax-cta-kicker span {
+    width: 25px;
+  }
+
+
+  .parallax-cta h2 {
+    font-size: 36px;
+
+    letter-spacing: -1px;
+  }
+
+
+  .parallax-cta-text {
+    font-size: 12.5px;
+
+    line-height: 1.7;
+  }
+
+
+  .parallax-cta-buttons {
+    flex-direction: column;
+
+    width: 100%;
+  }
+
+
+  .cta-btn {
+    width: 100%;
+    max-width: 320px;
+  }
+
+
+  .parallax-cta-features {
+    flex-direction: column;
+
+    gap: 17px;
+
+    margin-top: 35px;
+  }
+
+
+  .feature-divider {
+    width: 80px;
+    height: 1px;
+
+    margin: 0;
+  }
+
+
+  .parallax-feature {
+    flex: none;
+
+    width: 100%;
+  }
+
+}
+
+/* =========================================================
+   CLICKABLE SECTOR SECTION
+   Rebuilt Techz - Commercial / Industrial / Residential
+========================================================= */
+
+.sector-section {
+  position: relative;
+
+  width: 100%;
+  height: 600px;
+
+  display: flex;
+
+  margin: 0;
+  padding: 0;
+
+  overflow: hidden;
+
+  /*
+    IMPORTANT:
+    Navy background removed because it was becoming
+    visible between clipped cards as a blue line.
+  */
+  background: transparent;
+
+  font-family: "Poppins", sans-serif;
+}
+
+
+/* =========================================================
+   COMMON CARD
+========================================================= */
+
+.sector-card {
+  position: relative;
+
+  flex: 1 1 0;
+  min-width: 0;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+  padding: 0;
+
+  overflow: hidden;
+
+  text-decoration: none;
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  cursor: pointer;
+
+  transition:
+    flex 0.55s ease,
+    filter 0.4s ease;
+}
+
+
+/* =========================================================
+   BACKGROUND IMAGES
+========================================================= */
+
+.commercial-card {
+  background-image: url("image/commercial.png");
+}
+
+
+.industrial-card {
+  background-image: url("image/industrial.png");
+}
+
+
+.residential-card {
+  background-image: url("image/residencial.png");
+}
+
+
+/* =========================================================
+   ANGLED CARD SHAPES
+========================================================= */
+
+/*
+   Negative margins create overlap between clipped cards.
+   This prevents the parent background from showing through
+   as a blue separator line.
+*/
+
+
+.commercial-card {
+  clip-path: polygon(
+    0 0,
+    88% 0,
+    100% 100%,
+    0 100%
+  );
+
+  margin-right: -72px;
+
+  z-index: 3;
+}
+
+
+.industrial-card {
+  clip-path: polygon(
+    0 0,
+    88% 0,
+    100% 100%,
+    12% 100%
+  );
+
+  margin-right: -72px;
+
+  z-index: 2;
+}
+
+
+.residential-card {
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 100%,
+    12% 100%
+  );
+
+  z-index: 1;
+}
+
+
+/* =========================================================
+   NAVY IMAGE OVERLAY
+========================================================= */
+
+.sector-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(6, 31, 71, 0.38) 0%,
+      rgba(8, 45, 99, 0.48) 50%,
+      rgba(6, 31, 71, 0.62) 100%
+    );
+
+  pointer-events: none;
+
+  transition:
+    background 0.4s ease;
+}
+
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.sector-content {
+  position: relative;
+
+  z-index: 5;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  color: #ffffff;
+
+  transition:
+    transform 0.4s ease;
+}
+
+
+/* =========================================================
+   BOLT ICON
+========================================================= */
+
+.sector-bolt {
+  margin: 0 0 10px;
+
+  color: rgba(255, 255, 255, 0.82);
+
+  font-size: 66px;
+
+  line-height: 1;
+
+  filter:
+    drop-shadow(
+      0 4px 10px
+      rgba(0, 0, 0, 0.15)
+    );
+
+  transition:
+    color 0.35s ease,
+    transform 0.35s ease;
+}
+
+
+/* =========================================================
+   CARD TITLE
+========================================================= */
+
+.sector-content h3 {
+  margin: 0 0 28px;
+
+  color: #ffffff;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 24px;
+  font-weight: 600;
+
+  line-height: 1.2;
+
+  text-shadow:
+    0 3px 12px
+    rgba(0, 0, 0, 0.22);
+}
+
+
+/* =========================================================
+   PLUS BUTTON
+========================================================= */
+
+.sector-btn {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #f15a24;
+
+  color: #ffffff;
+
+  font-size: 14px;
+
+  box-shadow:
+    0 8px 22px
+    rgba(241, 90, 36, 0.30);
+
+  transition:
+    transform 0.35s ease,
+    background-color 0.35s ease,
+    color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+
+.sector-btn i {
+  color: inherit;
+
+  font-size: 14px;
+
+  line-height: 1;
+}
+
+
+/* =========================================================
+   HOVER EFFECTS
+========================================================= */
+
+@media (hover: hover) and (pointer: fine) {
+
+  .sector-card:hover {
+    flex-grow: 1.10;
+  }
+
+
+  .sector-card:hover .sector-overlay {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(6, 31, 71, 0.25) 0%,
+        rgba(8, 45, 99, 0.34) 50%,
+        rgba(6, 31, 71, 0.50) 100%
+      );
+  }
+
+
+  .sector-card:hover .sector-content {
+    transform: translateY(-8px);
+  }
+
+
+  .sector-card:hover .sector-bolt {
+    color: #ffffff;
+
+    transform: scale(1.05);
+  }
+
+
+  .sector-card:hover .sector-btn {
+    transform:
+      rotate(90deg)
+      scale(1.08);
+
+    background: #ffffff;
+
+    color: #f15a24;
+
+    box-shadow:
+      0 10px 25px
+      rgba(0, 0, 0, 0.18);
+  }
+
+}
+
+
+/* =========================================================
+   KEYBOARD FOCUS
+========================================================= */
+
+.sector-card:focus-visible {
+  outline:
+    3px solid #f15a24;
+
+  outline-offset: -4px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .sector-section {
+    height: 520px;
+  }
+
+
+  .commercial-card {
+    margin-right: -55px;
+  }
+
+
+  .industrial-card {
+    margin-right: -55px;
+  }
+
+
+  .sector-content h3 {
+    margin-bottom: 24px;
+
+    font-size: 27px;
+  }
+
+
+  .sector-bolt {
+    font-size: 52px;
+  }
+
+
+  .sector-btn {
+    width: 52px;
+    height: 52px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL TABLET
+========================================================= */
+
+@media (max-width: 800px) {
+
+  .sector-section {
+    height: 460px;
+  }
+
+
+  .commercial-card {
+    margin-right: -42px;
+  }
+
+
+  .industrial-card {
+    margin-right: -42px;
+  }
+
+
+  .sector-content h3 {
+    font-size: 23px;
+  }
+
+
+  .sector-bolt {
+    font-size: 45px;
+  }
+
+
+  .sector-btn {
+    width: 46px;
+    height: 46px;
+
+    font-size: 12px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .sector-section {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+
+    padding: 12px;
+
+    background: #ffffff;
+
+    overflow: hidden;
+
+    box-sizing: border-box;
+  }
+
+
+  /* Remove angled layout on mobile */
+
+  .sector-card,
+  .commercial-card,
+  .industrial-card,
+  .residential-card {
+    flex: none;
+
+    width: 100%;
+    height: 300px;
+
+    margin: 0;
+
+    clip-path: none;
+
+    border-radius: 12px;
+
+    box-sizing: border-box;
+  }
+
+
+  .sector-content h3 {
+    margin-bottom: 20px;
 
     font-size: 28px;
   }
 
 
-  .why-timeline {
-    left: 38px;
+  .sector-bolt {
+    margin-bottom: 8px;
 
-    top: 45px;
+    font-size: 48px;
   }
 
 
-  .why-node {
-    left: 33px;
-    top: 42px;
+  .sector-btn {
+    width: 50px;
+    height: 50px;
 
-    width: 11px;
-    height: 11px;
+    font-size: 13px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 450px) {
+
+  .sector-section {
+    gap: 10px;
+
+    padding: 10px;
   }
 
 
-  .why-number {
-    font-size: 20px;
+  .sector-card,
+  .commercial-card,
+  .industrial-card,
+  .residential-card {
+    height: 260px;
   }
 
 
-  .why-content h3 {
-    font-size: 17px;
+  .sector-content h3 {
+    margin-bottom: 17px;
+
+    font-size: 25px;
   }
 
 
-  .why-small-line {
-    margin:
-      11px 0 13px;
+  .sector-bolt {
+    font-size: 42px;
   }
 
 
-  .why-content p {
-    font-size: 11px;
+  .sector-btn {
+    width: 46px;
+    height: 46px;
+  }
+
+}
+
+
+/* =========================================================
+   REBUILT TECHZ FOOTER
+   Logo Theme:
+   Navy   #173d6d
+   Orange #f15a24
+========================================================= */
+
+.rebuilt-footer {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  font-family: "Poppins", sans-serif;
+}
+
+
+/* =========================================================
+   MAIN BACKGROUND
+========================================================= */
+
+.rebuilt-footer-main {
+  position: relative;
+
+  padding: 65px 0 55px;
+
+  background-image:
+    linear-gradient(
+      rgba(6, 31, 71, 0.76),
+      rgba(6, 31, 71, 0.84)
+    ),
+    url("image/banner-1.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  overflow: hidden;
+}
+
+
+/* subtle orange glow */
+
+.rebuilt-footer-main::before {
+  content: "";
+
+  position: absolute;
+
+  width: 320px;
+  height: 320px;
+
+  right: -150px;
+  bottom: -180px;
+
+  border-radius: 50%;
+
+  background: rgba(241, 90, 36, 0.10);
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.rebuilt-footer-container {
+  position: relative;
+  z-index: 2;
+
+  width: min(1400px, 90%);
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    1.35fr 0.75fr 1.05fr 1.2fr;
+
+  gap: 60px;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.rebuilt-footer-logo {
+  width: 245px;
+  min-height: 115px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 13px 18px;
+
+  margin-bottom: 23px;
+
+  background: #ffffff;
+
+  border-radius: 12px;
+
+  box-sizing: border-box;
+
+  box-shadow:
+    0 10px 30px
+    rgba(0, 0, 0, 0.15);
+}
+
+
+.rebuilt-footer-logo img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   BRAND DESCRIPTION
+========================================================= */
+
+.rebuilt-footer-brand > p {
+  max-width: 370px;
+
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.78);
+
+  font-size: 14px;
+
+  line-height: 1.9;
+}
+
+
+/* =========================================================
+   SOCIAL ICONS
+========================================================= */
+
+.rebuilt-socials {
+  display: flex;
+
+  gap: 11px;
+
+  margin-top: 25px;
+}
+
+
+.rebuilt-socials a {
+  width: 43px;
+  height: 43px;
+
+  display: grid;
+  place-items: center;
+
+  background:
+    rgba(255, 255, 255, 0.10);
+
+  border:
+    1px solid rgba(255, 255, 255, 0.18);
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 15px;
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+.rebuilt-socials a:hover {
+  background: #f15a24;
+
+  border-color: #f15a24;
+
+  transform: translateY(-4px);
+}
+
+
+/* =========================================================
+   COLUMN HEADINGS
+========================================================= */
+
+.rebuilt-footer-col h3 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 24px;
+  font-weight: 700;
+
+  line-height: 1.2;
+}
+
+
+.rebuilt-heading-line {
+  position: relative;
+
+  width: 76px;
+  height: 2px;
+
+  margin: 14px 0 27px;
+
+  background: #f15a24;
+}
+
+
+.rebuilt-heading-line::after {
+  content: "";
+
+  position: absolute;
+
+  right: 14px;
+  top: -2px;
+
+  width: 5px;
+  height: 6px;
+
+  background: #082d63;
+
+  border-left:
+    2px solid #ffffff;
+
+  border-right:
+    2px solid #ffffff;
+}
+
+
+/* =========================================================
+   LINKS
+========================================================= */
+
+.rebuilt-footer-col ul {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+
+.rebuilt-footer-col li {
+  margin-bottom: 15px;
+}
+
+
+.rebuilt-footer-col li:last-child {
+  margin-bottom: 0;
+}
+
+
+.rebuilt-footer-col li a {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 10px;
+
+  color: rgba(255, 255, 255, 0.78);
+
+  font-size: 14px;
+
+  line-height: 1.5;
+
+  text-decoration: none;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+.rebuilt-footer-col li a i {
+  color: #f15a24;
+
+  font-size: 10px;
+
+  transition:
+    transform 0.25s ease;
+}
+
+
+.rebuilt-footer-col li a:hover {
+  color: #ffffff;
+
+  transform: translateX(4px);
+}
+
+
+.rebuilt-footer-col li a:hover i {
+  transform: translateX(3px);
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.rebuilt-contact-intro {
+  max-width: 330px;
+
+  margin: 0 0 23px;
+
+  color: rgba(255, 255, 255, 0.76);
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+
+.rebuilt-contact-row {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  margin-bottom: 16px;
+
+  color: rgba(255, 255, 255, 0.82);
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+
+.rebuilt-contact-icon {
+  width: 38px;
+  height: 38px;
+
+  min-width: 38px;
+
+  display: grid;
+  place-items: center;
+
+  background: #f15a24;
+
+  color: #ffffff;
+
+  font-size: 14px;
+}
+
+
+.rebuilt-contact-row a {
+  color: rgba(255, 255, 255, 0.82);
+
+  text-decoration: none;
+
+  transition: color 0.25s ease;
+}
+
+
+.rebuilt-contact-row a:hover {
+  color: #f15a24;
+}
+
+
+/* =========================================================
+   BOTTOM FOOTER
+========================================================= */
+
+.rebuilt-footer-bottom {
+  background: #04152f;
+
+  border-top:
+    2px solid #f15a24;
+}
+
+
+.rebuilt-footer-bottom-inner {
+  width: min(1400px, 90%);
+
+  min-height: 68px;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 25px;
+}
+
+
+.rebuilt-footer-bottom p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.70);
+
+  font-size: 13px;
+}
+
+
+.rebuilt-footer-bottom-inner > div {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+}
+
+
+.rebuilt-footer-bottom a {
+  color: rgba(255, 255, 255, 0.70);
+
+  font-size: 13px;
+
+  text-decoration: none;
+
+  transition: color 0.25s ease;
+}
+
+
+.rebuilt-footer-bottom a:hover {
+  color: #f15a24;
+}
+
+
+.rebuilt-footer-bottom span {
+  color: rgba(255, 255, 255, 0.30);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .rebuilt-footer-container {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 45px 60px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .rebuilt-footer-main {
+    padding: 50px 0 40px;
+
+    background-attachment: scroll;
   }
 
 
-  .why-btn {
-    min-height: 48px;
+  .rebuilt-footer-container {
+    width: 88%;
 
-    padding:
-      0 22px;
+    grid-template-columns: 1fr;
 
-    font-size: 12px;
+    gap: 38px;
+  }
+
+
+  .rebuilt-footer-logo {
+    width: 220px;
+
+    min-height: 100px;
+  }
+
+
+  .rebuilt-footer-brand > p {
+    max-width: 100%;
+  }
+
+
+  .rebuilt-footer-col h3 {
+    font-size: 21px;
+  }
+
+
+  .rebuilt-heading-line {
+    margin-bottom: 22px;
+  }
+
+
+  .rebuilt-footer-bottom-inner {
+    width: 88%;
+
+    min-height: auto;
+
+    padding: 20px 0;
+
+    flex-direction: column;
+
+    text-align: center;
+  }
+
+
+  .rebuilt-footer-bottom-inner > div {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
 }

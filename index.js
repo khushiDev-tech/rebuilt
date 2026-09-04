@@ -257,3 +257,431 @@ if (whySection) {
   );
 
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const section =
+    document.querySelector(".testimonial-sec");
+
+  const track =
+    document.querySelector(".testimonial-track");
+
+  const cards =
+    document.querySelectorAll(".testimonial-card");
+
+  const prevBtn =
+    document.querySelector(".testimonial-prev");
+
+  const nextBtn =
+    document.querySelector(".testimonial-next");
+
+  const dotsContainer =
+    document.querySelector(".testimonial-dots");
+
+
+  if (
+    !track ||
+    !cards.length ||
+    !prevBtn ||
+    !nextBtn
+  ) {
+    return;
+  }
+
+
+  let currentIndex = 0;
+
+
+  /* ===============================
+     CARDS PER VIEW
+  =============================== */
+
+  function getCardsPerView() {
+
+    if (window.innerWidth <= 700) {
+      return 1;
+    }
+
+    if (window.innerWidth <= 1050) {
+      return 2;
+    }
+
+    return 3;
+  }
+
+
+  /* ===============================
+     MAX INDEX
+  =============================== */
+
+  function getMaxIndex() {
+
+    return Math.max(
+      0,
+      cards.length - getCardsPerView()
+    );
+
+  }
+
+
+  /* ===============================
+     CREATE DOTS
+  =============================== */
+
+  function createDots() {
+
+    dotsContainer.innerHTML = "";
+
+    const total =
+      getMaxIndex() + 1;
+
+
+    for (
+      let i = 0;
+      i < total;
+      i++
+    ) {
+
+      const dot =
+        document.createElement("button");
+
+      dot.className =
+        "testimonial-dot";
+
+      dot.setAttribute(
+        "aria-label",
+        `Go to testimonial ${i + 1}`
+      );
+
+
+      dot.addEventListener(
+        "click",
+        () => {
+
+          currentIndex = i;
+
+          updateSlider();
+
+        }
+      );
+
+
+      dotsContainer.appendChild(dot);
+
+    }
+
+  }
+
+
+  /* ===============================
+     UPDATE SLIDER
+  =============================== */
+
+  function updateSlider() {
+
+    const maxIndex =
+      getMaxIndex();
+
+
+    if (currentIndex > maxIndex) {
+      currentIndex = maxIndex;
+    }
+
+
+    const firstCard =
+      cards[0];
+
+    const cardWidth =
+      firstCard.getBoundingClientRect().width;
+
+
+    const styles =
+      getComputedStyle(track);
+
+    const gap =
+      parseFloat(styles.gap) || 0;
+
+
+    const move =
+      currentIndex *
+      (cardWidth + gap);
+
+
+    track.style.transform =
+      `translateX(-${move}px)`;
+
+
+    /* dots */
+
+    const dots =
+      dotsContainer
+        .querySelectorAll(
+          ".testimonial-dot"
+        );
+
+
+    dots.forEach(
+      (dot, index) => {
+
+        dot.classList.toggle(
+          "active",
+          index === currentIndex
+        );
+
+      }
+    );
+
+
+    /* arrows */
+
+    prevBtn.disabled =
+      currentIndex === 0;
+
+    nextBtn.disabled =
+      currentIndex === maxIndex;
+
+  }
+
+
+  /* ===============================
+     PREVIOUS
+  =============================== */
+
+  prevBtn.addEventListener(
+    "click",
+    () => {
+
+      if (currentIndex > 0) {
+
+        currentIndex--;
+
+        updateSlider();
+
+      }
+
+    }
+  );
+
+
+  /* ===============================
+     NEXT
+  =============================== */
+
+  nextBtn.addEventListener(
+    "click",
+    () => {
+
+      const maxIndex =
+        getMaxIndex();
+
+
+      if (currentIndex < maxIndex) {
+
+        currentIndex++;
+
+        updateSlider();
+
+      }
+
+    }
+  );
+
+
+  /* ===============================
+     WINDOW RESIZE
+  =============================== */
+
+  window.addEventListener(
+    "resize",
+    () => {
+
+      currentIndex = 0;
+
+      createDots();
+
+      updateSlider();
+
+    }
+  );
+
+
+  /* ===============================
+     INITIALIZE
+  =============================== */
+
+  createDots();
+
+  updateSlider();
+
+
+  /* ===============================
+     SCROLL ANIMATION
+  =============================== */
+
+  if (section) {
+
+    const observer =
+      new IntersectionObserver(
+
+        (entries, obs) => {
+
+          entries.forEach(
+            (entry) => {
+
+              if (
+                entry.isIntersecting
+              ) {
+
+                section
+                  .classList
+                  .add("animate");
+
+                obs.unobserve(
+                  section
+                );
+
+              }
+
+            }
+          );
+
+        },
+
+        {
+          threshold: 0.12
+        }
+
+      );
+
+
+    observer.observe(
+      section
+    );
+
+  }
+
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const ctaSection =
+    document.querySelector(".parallax-cta");
+
+
+  if (!ctaSection) {
+    return;
+  }
+
+
+  /* =====================================
+     SCROLL REVEAL
+  ===================================== */
+
+  const ctaObserver =
+    new IntersectionObserver(
+
+      (entries, observer) => {
+
+        entries.forEach((entry) => {
+
+          if (entry.isIntersecting) {
+
+            entry.target
+              .classList
+              .add("active");
+
+            observer.unobserve(
+              entry.target
+            );
+
+          }
+
+        });
+
+      },
+
+      {
+        threshold: 0.18
+      }
+
+    );
+
+
+  ctaObserver.observe(
+    ctaSection
+  );
+
+
+  /* =====================================
+     CUSTOM PARALLAX MOVEMENT
+  ===================================== */
+
+  function updateCTAParallax() {
+
+    if (window.innerWidth <= 900) {
+      ctaSection.style.backgroundPosition =
+        "65% center";
+
+      return;
+    }
+
+
+    const rect =
+      ctaSection.getBoundingClientRect();
+
+    const windowHeight =
+      window.innerHeight;
+
+
+    if (
+      rect.bottom > 0 &&
+      rect.top < windowHeight
+    ) {
+
+      const sectionCenter =
+        rect.top +
+        rect.height / 2;
+
+
+      const viewportCenter =
+        windowHeight / 2;
+
+
+      const distance =
+        sectionCenter -
+        viewportCenter;
+
+
+      const movement =
+        distance * 0.08;
+
+
+      ctaSection.style.backgroundPosition =
+        `center calc(50% + ${movement}px)`;
+
+    }
+
+  }
+
+
+  window.addEventListener(
+    "scroll",
+    updateCTAParallax,
+    {
+      passive: true
+    }
+  );
+
+
+  window.addEventListener(
+    "resize",
+    updateCTAParallax
+  );
+
+
+  updateCTAParallax();
+
+});
+
+
