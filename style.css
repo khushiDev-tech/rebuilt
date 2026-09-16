@@ -301,6 +301,16 @@ textarea {
 
   cursor: pointer;
 }
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: #ffffff;
+  z-index: 9999;
+
+  box-shadow:
+    0 4px 18px rgba(0, 0, 0, 0.08);
+}
 
 
 /* =========================================================
@@ -363,15 +373,15 @@ textarea {
 /* slider images */
 
 .hero-slide:nth-child(1) {
-  background-image: url("image/banner-1.jpg");
+  background-image: url("image/hero1.png");
 }
 
 .hero-slide:nth-child(2) {
-  background-image: url("image/banner-1.webp");
+  background-image: url("image/banner-1.jpg");
 }
 
 .hero-slide:nth-child(3) {
-  background-image: url("image/bb.avif");
+  background-image: url("image/hero2.png");
 }
 
 
@@ -2277,6 +2287,93 @@ textarea.form-control {
   transform: translateX(4px);
 }
 
+/* ==================================================
+   FULL CARD IMAGE HOVER
+   Original UI remains unchanged
+================================================== */
+
+.service-card {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+
+/* Full card image */
+.service-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image: var(--service-img);
+
+    /* IMPORTANT */
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    opacity: 0;
+    transform: scale(1);
+
+    transition: opacity 0.45s ease;
+
+    z-index: 5;
+    pointer-events: none;
+}
+
+.service-card:hover::before {
+    opacity: 1;
+}
+
+
+/* Slight overlay */
+.service-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        180deg,
+        rgba(0, 40, 85, 0.02) 0%,
+        rgba(0, 40, 85, 0.05) 55%,
+        rgba(0, 40, 85, 0.20) 100%
+    );
+
+    opacity: 0;
+
+    transition: opacity 0.45s ease;
+
+    z-index: 6;
+    pointer-events: none;
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+.service-card:hover::before {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.service-card:hover::after {
+    opacity: 1;
+}
+
+
+/* Keep arrow corner above image */
+
+.service-card .service-corner {
+    z-index: 10;
+}
+
+
+/* Optional orange border */
+
+.service-card:hover {
+    border-color: #ff5a1f;
+}
 
 /* =====================================================
    SCROLL ANIMATION
